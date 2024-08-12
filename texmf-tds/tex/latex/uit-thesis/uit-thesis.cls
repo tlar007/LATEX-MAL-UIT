@@ -625,6 +625,23 @@
 \renameautorefname[norsk]{part}{del}
 \renameautorefname[norsk]{appendix}{tillegg}
 
+% Set autoref definitions for nynorsk language - none of these are set.
+\renameautorefname[nynorsk]{section}{seksjon}
+\renameautorefname[nynorsk]{footnote}{fotnote}
+\renameautorefname[nynorsk]{item}{element}
+\renameautorefname[nynorsk]{chapter}{kapittel}
+\renameautorefname[nynorsk]{subsection}{underseksjon}
+\renameautorefname[nynorsk]{paragraph}{avsnitt}
+\renameautorefname[nynorsk]{subparagraph}{underavsnitt}
+\renameautorefname[nynorsk]{FancyVerbLine}{Line}
+\renameautorefname[nynorsk]{page}{side}
+\renameautorefname[nynorsk]{equation}{formel}
+\renameautorefname[nynorsk]{table}{tabell}
+\renameautorefname[nynorsk]{figure}{figur}
+\renameautorefname[nynorsk]{lstlisting}{listing}
+\renameautorefname[nynorsk]{part}{del}
+\renameautorefname[nynorsk]{appendix}{tillegg}
+
 
 %:-------------------------- Title and subtitle  -----------------------
 
@@ -1577,6 +1594,8 @@
 \renamedefname[USenglish]{ack}{Acknowledgements}
 \renamedefname[norsk]{abstract}{Sammendrag}
 \renamedefname[norsk]{ack}{Takksigelser}
+\renamedefname[nynorsk]{abstract}{Samandrag}
+\renamedefname[nynorsk]{ack}{Forord}
 
 % Missing from samin babel package
 \renamedefname[samin]{ack}{Giitosat}
@@ -1584,6 +1603,7 @@
 
 % Defined incorrectly with capital first letter in babel's 'norsk'
 \renamedefname[norsk]{see}{se}
+\renamedefname[nynorsk]{see}{sjå}
 
 % Control-ifs
 \newif\ifult@hasacknowledgement\ult@hasacknowledgementfalse
@@ -1908,6 +1928,7 @@
 % List of Listings
 \renamedefname[USenglish]{lstlistlisting}{List of Listings}
 \renamedefname[norsk]{lstlistlisting}{Listinger}
+\renamedefname[norsk]{lstlistlisting}{Listingar}
 \renewcommand\lstlistoflistings{%
   \iftotallstlistings% Only output list if count > 0
     \cleardoublepage
@@ -1921,6 +1942,7 @@
 % List of Abbreviations
 \renamedefname[USenglish]{acronym}{List of Abbreviations}
 \renamedefname[norsk]{acronym}{Forkortelser}
+\renamedefname[nynorsk]{acronym}{Forkortingar}
 
 \usepackage{ult-printglossary}
 
@@ -2479,6 +2501,10 @@
 \iflanguage{norsk}{%
   % Set the topleft frontpage logo to Norwegian
   \gdef\ult@frontpage@logo{ult_logo_norsk.pdf}
+}{}
+\iflanguage{nynorsk}{%
+  % Set the topleft frontpage logo to Norwegian
+  \gdef\ult@frontpage@logo{ult_logo_nynorsk.pdf}
 }{}
 
 % nynorsk language - changes the frontpage logos and profile to the 'nynorsk' Norwegian language
